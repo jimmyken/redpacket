@@ -1,0 +1,136 @@
+/* pages/remainder/remainder.wxss */
+page{
+  height: 100%;
+}
+#box{
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+   position: absolute; 
+   top: 0; 
+}
+/*右上角举报字体*/
+#report{
+  color: #586c94;
+  font-size: 26rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding:0 20rpx;
+  line-height: 70rpx
+}
+/*中间白色框*/
+#middle{
+  border-radius: 10rpx;
+   background-color: #fff; 
+  width: 90%;
+  height: 600rpx;
+  margin: 75rpx auto;
+    position: relative;  
+}
+/*白色框内又有一层盒子*/
+.middle_box{
+  width: 90%;
+  height: 90%;
+   margin: auto; 
+   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0; 
+}
+/*【账户余额】一栏*/
+.remainder{
+  width: 100%;
+  height: 17%;
+}
+.remainder_txt{
+  color: #333333;
+  font-size: 32rpx;
+}
+.remainder_num{
+  color: #999999;
+  font-size: 40rpx;
+  margin-left: 100rpx;
+}
+.remainder_txt2{
+  font-size: 26rpx;
+  color:#999999; 
+  margin-left: 10rpx;
+}
+/*【提现金额一栏】*/
+.draw{
+  width: 100%;
+  height: 17%;
+}
+.draw text{
+  color: #333333;
+  font-size: 32rpx;
+  position: relative;
+  top: 40rpx;
+}
+
+/*输入框一栏*/
+.number{
+  width: 100%;
+  height: 17%;
+  border-bottom: 2rpx solid #ccc;
+  display:flex;
+}
+/* ￥图标 */
+.number text{
+  font-size: 46rpx;
+  margin-top: 16rpx;
+}
+/*输入框*/
+.number input{
+  height: 100%;
+  width: 100%;
+  margin-left: 20rpx;
+  font-size: 46rpx;
+  text-align: left;
+}
+/*中间【全部提现】提示文字*/
+.txt{
+  width: 100%;
+  height: 17%;
+  line-height: 90rpx;
+}
+.txt text{
+  color: #999999;
+  font-size: 24rpx;
+  display: inline-block;
+}
+.txt view{
+  color: #586C94;
+  font-size: 26rpx;
+  display: inline-block;
+}
+/*【提现】按钮*/
+.drawBtn{
+  width: 100%;
+  height: 17%;
+}
+.drawBtn button{
+  background-color: #fd4760;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 40rpx;
+}
+/*工作日到账提醒*/
+.date{
+  width: 100%;
+  height: 15%;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 90rpx;
+  color: #999999;
+}
+.question{
+  width: 100%;
+  position: absolute;
+  bottom: 10rpx; 
+  font-size: 28rpx;
+  color: #586c94;
+  text-align: center
+}

@@ -1,0 +1,119 @@
+/* pages/home/home.wxss */
+
+page {
+  height: 100%;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/*用户头像*/
+.userinfo_avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  position: relative;
+  top: 64rpx;
+  z-index: 1;
+  box-shadow: 0 0 30px #fff;
+}
+
+/*中间白色框*/
+.box2 {
+  background-color: #fff;
+  width: 90%;
+  height: 45%;
+  margin: auto;
+  padding-top: 120rpx;
+  box-shadow: 0 0 20px #ccc;
+}
+
+/*中间白色框内又有一个盒子 第三层box*/
+.box3 {
+  width: 90%;
+  margin: auto;
+}
+
+/*盒子内放置内容的3个view*/
+.box3 view {
+  width: 100%;
+  height: 120rpx;
+  margin-top: 4rpx;
+  line-height: 100rpx;
+  display: flex;
+}
+
+/*【赏金（个）】字体*/
+.box3_command text {
+  margin: auto 0;
+}
+
+/*【跑车（辆）】字体*/
+.box3_num text {
+  margin: auto 0;
+}
+
+.box3 input {
+  height: 60%;
+  width: 430rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  font-size: 36rpx;
+  margin: 25rpx 20rpx 0;
+} 
+
+/*中间【服务费】字体*/
+.box3_text view {
+  font-size: 25rpx;
+  color: #999;
+  margin: 20rpx 0 0 70rpx;
+}
+
+/*【生成跑车赛】按钮*/
+.box3_button {
+  background-color: #fd4760;
+  width: 100%;
+   height: 77%; 
+  color: #fff;
+  border-radius: 40rpx;
+  font-size: 32rpx;
+}
+
+/*举报字体*/
+.report {
+  font-size: 30rpx;
+  width: 100rpx;
+  margin: 20rpx auto;
+  color: #586c94;
+}
+
+/*底部栏*/
+.bottom {
+  background-color: #fff;
+  height: 125rpx;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.bottom view {
+  width: 32.5%;
+  float: left;
+  text-align: center;
+}
+
+.bottom image {
+  width: 55rpx;
+  height: 55rpx;
+  display: block;
+  margin: 10rpx auto 0rpx;
+}
+
+.bottom text {
+  font-size: 12px;
+  color: #888;
+}

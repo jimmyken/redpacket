@@ -1,0 +1,27 @@
+<!--pages/forward game/forward game.wxml-->
+<view class='box'>
+  <image class='userinfo_avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+  <view class='nickName'>
+    <text>{{userInfo.nickName}}</text>
+  </view>
+
+  <view class='qr'>
+     <view class='arc'></view>
+     <view class='circle'>
+          <image src='{{qrUrl}}'></image>
+     </view>
+  </view>
+
+  <view class='bottom'>
+    <view class='forward'>
+      <button open-type="share">转发到群聊</button>
+    </view>
+    <view class='picture'>
+      <button bindtap='makeImgClick'>生成朋友圈分享图</button>
+    </view>
+    <view class='text'>
+      <text bindtap='gameStartCilck'>我也要赏图→</text>
+    </view>
+  </view>
+</view>
+ <!-- open-type="share" -->

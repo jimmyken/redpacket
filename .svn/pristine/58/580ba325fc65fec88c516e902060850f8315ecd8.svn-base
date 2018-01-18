@@ -1,0 +1,149 @@
+<!--pages/game start/game start.wxml-->
+<view class='box'>
+
+  <!--头部 页面灰色部分  -->
+  <view class='head'>
+    <image class='userinfo_avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+    <view class='nickName'>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+
+    <view class='text'>
+      <text>点击“开始按钮”，摇动手机使跑车开往终点</text>
+      <text>摇动手机越快，跑车开动得更快哟～</text>
+    </view>
+
+    <view class='gameBox'>
+      <view class='animation'>
+        <view class='carImg' style='right:{{car}}%'>
+          <image src='./../../image/car.png'></image>
+        </view>
+        <view class='flagImg'>
+          <image src='./../../image/flag.png'></image>
+        </view>
+      </view>
+
+      <view class='progress'>
+       <view style='left:{{left}}%'></view>
+      </view>
+    </view>
+
+    <view class='btn'>
+      <button bindtap='gameStartCilck' style='background-color:#fd4760;display: {{startDisplay}};'>开始</button>
+    </view>
+     <view class='btn'>
+      <button bindtap='gameOutClick' style='background-color:#747474;display: {{outDisplay}};'>退出比赛</button>
+    </view>
+
+    <!--比赛结束暂不进行跳转  -->
+     <view class='btn'>
+      <button bindtap='gameOverClick' style='background-color:#bebebe; display: {{overDisplay}};'>比赛结束</button>
+    </view>
+
+    <view class='link'>
+      <text bindtap='recordCilck'>去提现</text>
+      <text bindtap='homeCilck'>去赏图</text>
+      <text bindtap='forwardGameCilck'>去转发</text>
+    </view>
+
+  </view>
+
+
+  <!--底部 页面白色部分  -->
+  <view class='rump'>
+    <view class='rump_head'>
+      <view class='rump_head_left'>共
+        <text>{{sum}}</text>元，领取
+        <text>{{num}}</text>个</view>
+      <view class='rump_head_right'>
+        <text bindtap='reportCilck'>举报</text>
+      </view>
+    </view>
+
+    <view class='rump_text' style='display:{{textDisplay}}'>
+      <view>未领取的金额</view>
+      <view>将于24小时后退至余额</view>
+    </view>
+
+    <!--领取红包人员列表  -->
+    <view class='bottom' style='display:{{dataDisplay}}'>
+
+      <view class='bottom-box' wx:for='{{receiveRedPacket}}'>
+
+        <!--领取到红包人员的头像  -->
+        <view class='image' style='background:url({{receiveRedPacket[index].userImg}})'></view>
+
+        <view class='databox'>
+          <view class='info'>
+            <!--领取到红包人员的名字  -->
+            <text style='height:50rpx;  position:relative; top:-8rpx;'>{{receiveRedPacket[index].name}}</text>
+            <!--排名的图片  -->
+            <image src='{{receiveRedPacket[index].rankImg}}'></image>
+            <!--领取到的红包金额  -->
+            <text style='float:right; height:50rpx; position:relative; top:25rpx;'>{{receiveRedPacket[index].money}}元</text>
+          </view>
+          <view class='date'>
+            <!--比赛用时  -->
+            <text style='height:50rpx;'>{{receiveRedPacket[index].time}}</text>
+            <!--领取的日期  -->
+            <text style='float:right; height:50rpx;'>{{receiveRedPacket[index].date}}</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+
+    <!--页面隐藏部分  -->
+    <view class='shake' style='z-index:{{index}}'>
+      <image src='./../../image/shake.png'></image>
+      <text>快速摇动手机</text>
+      <text>让跑车跑得更快</text>
+    </view>
+
+
+    <view class='gameover' style='visibility:{{visibility}}'>
+    
+      <!--弹出的背景图-->
+      <view class='gameover-box'>
+      <image src="{{endgamebmg}}" style="width:100%;height:100%;"></image>
+      </view>
+
+      <!--灰白色的背景-->
+         <view class='gameover-box' style="background:#999;opacity:0.5;"></view>
+       <view class='gameover-box'>
+
+        <view class='gameover-box-head'>
+          <image src='./../../image/flagleft.png'></image>
+          <text>抵达终点</text>
+          <image src='./../../image/flagright.png'></image>
+        </view>
+
+        <text class='gameover-box-text'>获得赏金</text>
+
+        <view class='gameover-box-sum'>
+          <text class='left'>9</text>
+          <text class='right'>元</text>
+        </view>
+        <view class='gamerecord'>
+          <view class='icon'>
+            <image src='./../../image/gametime.png'></image>
+            <image src='./../../image/gametiming.png'></image>
+            <image src='./../../image/gamenumber.png'></image>
+          </view>
+          <view class='text'>
+            <text>起跑时间:</text>
+            <text>比赛用时:</text>
+            <text>摇动次数:</text>
+          </view>
+          <view class='text'>
+            <text>{{startTime}}</text>
+            <text>00:12:21</text>
+            <text>45</text>
+          </view>
+        </view>
+        <button class='gameoverBtn' bindtap='gameoverBtnClick'>确定</button>
+      </view>
+    </view>
+  </view>
+</view>

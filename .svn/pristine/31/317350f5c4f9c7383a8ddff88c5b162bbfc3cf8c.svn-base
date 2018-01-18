@@ -1,0 +1,40 @@
+<!--pages/report/report.wxml-->
+<view class='box'>
+
+  <view class='head'>
+    <text>请选择举报原因</text>
+  </view>
+
+  <view class='cause'>
+   <radio-group>
+     <label class="radio" wx:for="{{items}}">
+       <view bindtap='checkClick' data-mine="{{index}}">{{item.value}}
+         <radio checked="{{item.checked}}" />
+       </view>
+     </label> 
+    </radio-group>
+  </view>
+
+  <view class='head'>
+    <text>请填写您的个人信息，方便我们联系您</text>
+  </view>
+
+  <form>
+
+    <view class='info'>
+      <view>
+        <text >手机号</text>
+        <input type='number' placeholder="选填" bindinput='teleInput' value="{{value}}"></input>
+      </view>
+      <view>
+        <text>微信号</text>
+        <input placeholder="选填" bindinput='wxInput'></input>
+      </view>
+    </view>
+
+    <view class='btn'>
+       <button bindtap='reportCilck'>提交</button> 
+    </view>
+
+  </form>
+</view>

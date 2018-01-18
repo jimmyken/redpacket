@@ -1,0 +1,41 @@
+<!--pages/remainder/remainder.wxml-->
+<view id='box'>
+  <view id='report' bindtap='reportCilck'>举报</view>
+
+  <view id='middle'>
+
+    <view class='middle_box'>
+
+      <view class='remainder'>
+        <text class='remainder_txt'>账户余额</text>
+        <text class='remainder_num'>{{remainder}}</text>
+        <text class='remainder_txt2'>元</text>
+      </view>
+
+      <view class='draw'>
+        <text>提现金额</text>
+      </view>
+
+      <view class='number'>
+        <text>￥</text>
+        <input class='input' type='digit' bindinput="numInput" name='num'></input>
+      </view>
+
+      <view class='txt'>
+        <text>提现到微信钱包，</text>
+        <view bindtap='wholeClick'>全部提现</view>
+      </view>
+
+      <view class='drawBtn'>
+        <button name='btn' bindtap='drawBtn'>提现</button>
+      </view>
+
+      <view class='date'>1-5个工作日到账</view>
+
+    </view>
+
+  </view>
+  <view class='question'>
+    <text bindtap='questionCilck'>常见问题</text>
+  </view>
+</view>

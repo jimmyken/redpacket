@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/home/home",
+      "pages/gameStart/gameStart",
+   
+    "pages/shareimg/shareimg",
+    "pages/forwardGame/forwardGame",
+    "pages/question/question",
+    "pages/record/record",
+    "pages/report/report",
+ 
+    "pages/submit/submit",
+    "pages/remainder/remainder"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "笨笨乐跑",
+    "backgroundColor": "#eeeeee",
+    "navigationBarTextStyle": "white"
+  }
+}

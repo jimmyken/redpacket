@@ -1,0 +1,97 @@
+<!--pages/record/record.wxml-->
+<view id='box'>
+  <view id='head'>
+    <view id='head_left' bindtap='head_left_click' style='color:{{leftColor}};text-decoration:{{left_decoration}}'>我发出的</view>
+    <view id='head_right' bindtap='head_right_click' style='color:{{rightColor}};text-decoration:{{right_decoration}}'>我收到的</view>
+  </view>
+
+<!--我发出的  -->
+  <view class='box2'>
+    <swiper autoplay='{{isauto}}' duration="200" interval="200" style='height:100%' bindchange="change_swiper">
+      <swiper-item class="item1">
+
+        <view id='middle'>
+          <view class='userinfo'>
+            <image class='userinfo_avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+            <view>
+              <text class='userinfo_nickname'>{{userInfo.nickName}}</text>
+              <text class='userinfo_text'></text>
+            </view>
+          </view>
+          <view class='money'>
+            <view class='sum'>
+              <text class='sum_txt'>金额(元)</text>
+              <text class='sum_num'>0.00</text>
+            </view>
+            <view class='num'>
+              <text class='num_txt'>数量(个)</text>
+              <text class='num_num'>0</text>
+            </view>
+          </view>
+        </view>
+
+        <scroll-view scroll-y="flase" lower-threshold="2" class='bottom' bindscrolltolower="sendLower">
+          <view class='bottom-box' wx:for='{{sendRedPacket}}'>
+            <view class='info'>
+              <text style='height:50rpx; position:relative;top:12rpx;'>{{userInfo.nickName}}</text>
+              <text style='float: right;height:50rpx;position:relative;top:12rpx;'>{{sendRedPacket[index].sum}}元</text>
+            </view>
+            <view class='date'>
+              <text style='height:50rpx;'>{{sendRedPacket[index].date}}</text>
+              <text style='float: right;height:50rpx;'>{{sendRedPacket[index].num}}</text>
+            </view>
+          </view>
+        </scroll-view>
+        <view class='question' bindtap='questionCilck'>常见问题</view> 
+      </swiper-item>
+       
+<!--我收到的  -->
+      <swiper-item class="item2">
+        <view id='middle'>
+
+          <view class='userinfo'>
+            <image class='userinfo_avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+            <view>
+              <text class='userinfo_nickname'>{{userInfo.nickName}}</text>
+              <text class='userinfo_text'> 共收到</text>
+            </view>
+          </view>
+
+          <view class='money'>
+            <view class='sum'>
+              <text class='sum_txt'>金额(元)</text>
+              <text class='sum_num'>0.00</text>
+            </view>
+            <view class='num'>
+              <text class='num_txt'>数量(个)</text>
+              <text class='num_num'>0</text>
+            </view>
+          </view>
+        </view>
+
+        <scroll-view class='bottom' scroll-top lower-threshold="5" scroll-y="false" bindscrolltolower="receiveLower">
+          <view class='bottom-box' wx:for='{{receiveRedPacket}}'>
+
+            <view class='image' style='background:url({{receiveRedPacket[index].imgurl}})'>
+            </view>
+
+            <view class='databox'>
+              <view class='info'>
+                <text style='height:50rpx;  position:relative; top:25rpx;'>{{receiveRedPacket[index].name}}</text>
+                <text style='float:right; height:50rpx; position:relative; top:25rpx;'>12.00元</text>
+              </view>
+              <view class='date'>
+                <text style='height:50rpx;'>{{receiveRedPacket[index].date}}</text>
+                <text style='float:right; height:50rpx;'>3/5</text>
+              </view>
+            </view>
+
+          </view>
+        </scroll-view>
+         <view class='question' bindtap='questionCilck'>常见问题</view> 
+      </swiper-item>
+
+    </swiper>
+  </view>
+  
+</view>

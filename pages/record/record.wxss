@@ -1,0 +1,195 @@
+/* pages/record/record.wxss */
+
+page {
+  height: 100%;
+}
+
+#box {
+  width: 100%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+#head {
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background-color: #fff;
+  height: 8%;
+}
+
+#head_left {
+  display: inline-block;
+  line-height: 80rpx;
+  width: 50%;
+  color: red;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+#head_right {
+  display: inline-block;
+  line-height: 80rpx;
+  width: 50%;
+  color: #999;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+.box2 {
+  height: 92%;
+}
+
+#middle {
+  background-color: #f5f6f5;
+  width: 100%;
+  height: 40%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 280rpx;
+}
+
+.userinfo_avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  margin-top: 40rpx;
+}
+
+.userinfo_nickname {
+  color: #7283a4;
+  font-size: 28rpx;
+}
+
+.userinfo_text {
+  font-size: 28rpx;
+}
+
+.money {
+  text-align: center;
+}
+
+.sum {
+  width: 15%;
+  display: inline-block;
+  margin-right: 80rpx;
+}
+
+.num {
+  width: 15%;
+  display: inline-block;
+  margin-left: 80rpx;
+  text-align: center;
+}
+
+.sum_txt {
+  display: flex;
+  color: #9b9b9b;
+  font-size: 28rpx;
+}
+
+.sum_num {
+  display: flex;
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+
+.num_txt {
+  display: flex;
+  color: #9b9b9b;
+  font-size: 28rpx;
+}
+
+.num_num {
+  display: block;
+  font-size: 50rpx;
+  font-weight: bolder;
+}
+
+/*我发出的*/
+
+swiper .item1 .bottom {
+  width: 100%;
+   /* overflow-y: scroll;  */
+  height: 50%;
+}
+
+swiper .item1 .bottom .bottom-box {
+  height: 110rpx;
+  line-height: 60rpx;
+  width: 85%;
+  margin: 0 auto;
+}
+
+swiper .item1 .bottom .info {
+  font-size: 30rpx;
+  height: 50%;
+  /* font-weight: bolder; */
+}
+
+swiper .item1 .bottom .date {
+  font-size: 26rpx;
+  height: 50%;
+}
+
+/*我收到的  */
+
+swiper .item2 .bottom {
+  width: 100%;
+  overflow-y: scroll;
+  height: 50%;
+}
+
+swiper .item2 .bottom .bottom-box {
+  height: 135rpx;
+  line-height: 60rpx;
+  width: 85%;
+  margin: 0 auto;
+}
+
+swiper .item2 .bottom .info {
+  font-size: 30rpx;
+  height: 67rpx;
+  /* font-weight: bolder; */
+}
+
+swiper .item2 .bottom .date {
+  font-size: 26rpx;
+}
+
+swiper .item2 .image {
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  position: relative;
+  top: 40rpx;
+  left: 20rpx;
+  border-radius: 10rpx;
+  /* background-image: url('http://fj.ikafan.com/attachment/forum/201510/16/154707c6htoutw681zmt61.jpg.thumb.jpg'); */
+}
+
+/* swiper .item2 .image image{
+  width: 90rpx;
+  height: 90rpx;
+} */
+
+.databox {
+  width: 80%;
+  float: right;
+  margin-top: -80rpx;
+}
+
+.question {
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 26rpx;
+  color: #818181;
+}

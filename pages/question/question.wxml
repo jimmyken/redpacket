@@ -1,0 +1,21 @@
+<!--pages/question/question.wxml-->
+<view class='box'>
+
+  <label class='box2' wx:for="{{items}}">
+    <!--问题  -->
+    <view  class='question' bindtap='cilck' data-mine="{{index}}" style='color:{{item.color}}'>
+      <text>{{item.question}}</text>
+      <image src="./../../image/questionImage.png"></image>
+    </view>
+    
+    <!--答案  -->
+    <view class='answer' wx:if="{{item.flag}}">
+      <text>{{item.answer}}</text>
+    </view>
+  </label>
+
+  <view class='motton'>
+     <button open-type='contact'>联系在线客服</button> 
+  </view>
+  
+</view>

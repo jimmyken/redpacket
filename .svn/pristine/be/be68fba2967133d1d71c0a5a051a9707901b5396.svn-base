@@ -1,0 +1,33 @@
+/* pages/submit/submit.wxss */
+page{
+  height: 100%;
+}
+.box{
+height: 100%;
+width: 90%;
+margin: 0 auto;
+text-align: center;
+}
+
+.box image{
+width: 300rpx;
+height: 300rpx;
+}
+.box .text1{
+  display: block;
+  font-size: 32rpx;
+  font-weight: bolder;
+}
+.box .text2{
+  position: relative;
+  top: 100rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+.box button{
+  margin-top: 150rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background-color:#09bb07; 
+  border-radius: 5000000000rpx;
+}

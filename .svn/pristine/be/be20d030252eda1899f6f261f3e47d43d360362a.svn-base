@@ -1,0 +1,8 @@
+<!--pages/submit/submit.wxml-->
+<view class='box'>
+    <image src='./../../image/ok.png'></image>
+  <text class='text1'>提交成功</text>
+  <text class='text2'>感谢您的反馈，我们坚决反对色情、暴力、欺诈等违规信息我们会认真处理您的举报，维护绿色、健康的网络环境。
+  </text>
+  <button bindtap='homeCilck'>确定</button>
+</view>

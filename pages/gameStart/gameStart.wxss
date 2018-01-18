@@ -1,0 +1,365 @@
+/* pages/game start/game start.wxss */
+
+page {
+  height: 100%;
+}
+
+.box {
+  height: 100%;
+}
+
+/*灰色背景的上部分*/
+
+.head {
+  height: 65%;
+  background-color: #dedede;
+  text-align: center;
+}
+
+/*用户头像*/
+
+.userinfo_avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 100%;
+  margin-top: 30rpx;
+}
+
+/*用户名*/
+
+.nickName text {
+  font-size: 28rpx;
+  font-weight: bolder;
+}
+
+/*上部分的中间说明文字*/
+
+.text {
+  margin-top: 30rpx;
+}
+
+.text text {
+  font-size: 28rpx;
+  display: block;
+  color: #777;
+}
+
+/*上部分中的游戏动画部分*/
+
+.gameBox {
+  width: 90%;
+  margin: auto;
+}
+
+/*动画部分*/
+
+.animation {
+  width: 100%;
+  height: 80rpx;
+  margin: 40rpx auto 0rpx;
+}
+
+.animation view {
+  width: 80rpx;
+  height: 80rpx;
+  display: inline-block;
+}
+
+.animation image {
+  width: 80rpx;
+  height: 80rpx;
+  
+}
+
+/*小车图片*/
+
+.animation .carImg {
+
+  float: left;
+  position: relative;
+  /*40到630 */
+  /* animation: mymove 3s;  */
+    /* animation-fill-mode: forwards;   */
+
+}
+/* @keyframes mymove{
+ from{left:0rpx}
+ to{left:84%}
+} */
+
+/*旗子图片*/
+
+.animation .flagImg {
+  float: right;
+}
+
+/*进度条*/
+ .gameBox .progress{
+  width: 100%;
+  height: 20rpx;
+  background-color: #b7b7b7;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.gameBox .progress view{
+ background-color: #fd4760;
+ width: 100%;
+ height: 20rpx;
+ position: relative;
+} 
+
+/*【开始】按钮*/
+
+.btn button {
+  width: 85%;
+  border-radius: 40rpx;
+  background-color: #fd4760;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 100rpx;
+  font-size: 32rpx;
+}
+
+/*【去提现去比赛去转发】字体*/
+
+.link {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.link text {
+  margin: 0 60rpx;
+  font-size: 32rpx;
+}
+
+/*下半部分 页面白色部分*/
+.rump{
+   height: 35%;
+}
+.rump_head {
+  height: 10%;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #8f8f8f;
+  display: flex;
+}
+
+.rump_head_left {
+  margin-left: 40rpx;
+ 
+}
+
+.rump_head_right {
+  padding: 0 50rpx;
+  position: absolute;
+  right: 0;
+}
+
+.rump_text {
+  font-size: 28rpx;
+  color: #878787;
+  margin-top: 50rpx;
+  /* display: none; */
+}
+
+.rump_text view {
+  text-align: center;
+  display: block;
+}
+
+
+/*领取红包的人员列表  */
+.bottom {
+  width: 100%;
+  overflow-y: scroll;
+  height: 90%;
+}
+
+.bottom .bottom-box {
+  height: 120rpx;
+  line-height: 60rpx;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.bottom .info {
+  font-size: 30rpx;
+  height: 67rpx;
+}
+.bottom .info image{
+  width: 40rpx;
+  height: 40rpx;
+   display: inline-block ;
+   margin: 30rpx 0 0 20rpx;
+} 
+.bottom .date {
+  font-size: 26rpx;
+}
+
+.image {
+  width: 90rpx;
+  height: 90rpx;
+  display: block;
+  position: relative;
+  top: 40rpx;
+   left: 20rpx; 
+  border-radius: 10rpx;
+  /* background-image: url('http://fj.ikafan.com/attachment/forum/201510/16/154707c6htoutw681zmt61.jpg.thumb.jpg'); */
+}
+
+.databox {
+  width: 80%;
+  float: right;
+  margin-top: -80rpx;
+}
+
+
+/*游戏开始时弹出的摇一摇提示框*/
+
+.shake {
+  width: 270rpx;
+  height: 270rpx;
+  background-color: #595959;
+  position: absolute;
+  left: 255rpx;
+  top: 80rpx;
+  z-index: -1;
+  visibility: nome;
+  opacity: 0.8;
+  border-radius: 5rpx;
+  text-align: center;
+}
+
+.shake image {
+  width: 170rpx;
+  height: 170rpx;
+  margin-top: 10rpx;
+}
+
+.shake text {
+  font-size: 26rpx;
+  color: #fff;
+  display: block;
+}
+
+/*游戏结束时弹出的提示  */
+.gameover {
+  width: 100%;
+  height: 100%;
+  background: rgba(89, 89, 89, 0.7);
+  position: absolute;
+  top: -2rpx;
+}
+
+.gameover-box {
+  width: 80%;
+  height: 70%;
+ /* background-color: #333;*/
+  position: absolute;
+  top: 80rpx;
+  left: 10%;
+  text-align: center;
+}
+
+.gameover-box-head {
+  color:#fff;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+/*  background-color: #e8e8e8;*/
+}
+
+.gameover-box-head image {
+  color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+  top: 10rpx;
+}
+
+.gameover-box-head text {
+  position: relative;
+  bottom: 20rpx;
+  font-weight: bolder;
+  font-size: 32rpx;
+}
+
+.gameover-box-text {
+  color:#fff;
+  font-weight: bolder;
+  font-size: 42rpx;
+  position: relative;
+  top: 60rpx;
+}
+
+.gameover-box-sum {
+  width: 80%;
+  height: 210rpx;
+  line-height: 210rpx;
+  margin: 80rpx auto;
+  border-bottom: 2rpx solid #d7d7d7;
+}
+
+.gameover-box-sum .left {
+  color:#fff;
+  font-size: 120rpx;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+.gameover-box-sum .right {
+  color:#fff;
+  font-size: 42rpx;
+  margin-left: 20rpx;
+  font-weight: bolder;
+}
+
+.gameover-box .gamerecord {
+  color:#fff;
+  width: 60%;
+  height: 180rpx;
+  margin: -70rpx auto;
+}
+
+.gameover-box .gamerecord view {
+  height: 100%;
+   display: inline-block; 
+  margin-left: 10rpx;
+  margin-top: 0;
+}
+
+.gameover-box .gamerecord .icon {
+  width: 20%;
+}
+
+.gameover-box .gamerecord .icon image {
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}
+
+.gameover-box .gamerecord .text {
+  width: 35%;
+}
+
+.gameover-box .gamerecord text {
+  width: 90%;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  text-align: left;
+  font-size: 26rpx;
+  color: #959595;
+  /* color:#fff; */
+}
+
+.gameover-box .gameoverBtn{
+  margin-top: 100rpx;
+  width: 80%;
+  background-color: #fd4760;
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 50rpx;
+}
+
+

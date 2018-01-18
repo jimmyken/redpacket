@@ -1,0 +1,47 @@
+<!--pages/home/home.wxml-->
+<view class='box'>
+  <image class='userinfo_avatar' src='{{userInfo.avatarUrl}}' background-size="cover"></image>
+  <view class='box2'>
+    <form>
+      <view class='box3'>
+
+        <view class='box3_command'>
+          <text>赏图(元)</text>
+          <input type="digit" maxlength="7" placeholder="填写金额" bindinput='commandInput' name="command" value='{{command}}'></input>
+        </view>
+
+        <view class='box3_num'>
+          <text>乐跑(次)</text>
+          <input type='number' maxlength="4" placeholder="填写乐跑次数" bindinput='numInput' name="num"></input>
+        </view>
+
+        <view class='box3_text'>
+          <view>需支付￥<text>{{service}}</text>服务费，优先使用余额￥<text>{{remainder}}</text></view>
+        </view>
+
+        <button class='box3_button' bindtap='forwardGameClick'>{{btnText}}</button>
+
+      </view>
+
+    </form>
+  </view>
+
+  <view class='report' bindtap='reportClick'>举报</view>
+
+  <view class='bottom'>
+    <view class='record' bindtap='recordCilck'>
+      <image src='./../../image/recort.png'></image>
+      <text>我的记录</text>
+    </view>
+
+    <view class='remainder' bindtap='remainderCilck'>
+      <image src='./../../image/remainder.png'></image>
+      <text>余额提现</text>
+    </view>
+
+    <view class='question' bindtap='questionCilck'>
+      <image src='./../../image/question.png'></image>
+      <text>常见问题</text>
+    </view>
+  </view>
+</view>
